@@ -96,9 +96,12 @@ This is read-only demo with guest account enabled.
 - No database required
 - Framework free [™](https://www.youtube.com/watch?v=L5jI9I03q8E)
 
+## Limitations
+- Symlinks are not supported by the underlying [Flysystem](https://flysystem.thephpleague.com/v1/docs/adapter/local/)
+- File permission operations are not supported (chmod/chown)
 
 ## Minimum Requirements
-- PHP 7.2+ (with php-zip extension)
+- PHP 7.2.5+ (with php-zip extension)
 
 See [install instructinos](https://docs.filegator.io/install.html) for Ubuntu 18.04 or Debian 10.3. Get $100 in ([server credits here](https://m.do.co/c/93994ebda78d)) so you can play around.
 

@@ -19,6 +19,7 @@ return [
         'editable' => ['.txt', '.css', '.js', '.ts', '.html', '.php', '.json', '.md'],
         'date_format' => 'YY/MM/DD hh:mm:ss', // see: https://momentjs.com/docs/#/displaying/format/
         'guest_redirection' => '', // useful for external auth adapters
+        'search_simultaneous' => 5,
         'filter_entries' => [],
     ],
 
@@ -44,7 +45,9 @@ return [
                     //$save_path = __DIR__.'/private/sessions';
                     $handler = new \Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler($save_path);
 
-                    return new \Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage([], $handler);
+                    return new \Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage([
+                            "cookie_samesite" => "Lax",
+                        ], $handler);
                 },
             ],
         ],

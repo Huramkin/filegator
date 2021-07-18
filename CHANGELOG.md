@@ -2,6 +2,21 @@
 
 ## Upcoming...
 
+## 7.6.0 - 2021-07-12
+
+* Better search with configurable simultaneous search limit, fixes #234
+
+## 7.5.3 - 2021-07-05
+
+* Invalidate sessions when the user is changed, prevents session fixation (json, database)
+* Cookie samesite defaults to Lax, fixes #232
+
+## 7.5.2 - 2021-06-24
+
+* Composer update
+* Flysystem patch GHSA-9f46-5r25-5wfm
+* Min supported PHP version is now 7.2.5
+
 ## 7.5.1 - 2021-03-23
 
 * New csrf token key config option added
